@@ -1,0 +1,80 @@
+Base URL: 
+Replace `localhost:4000` with your actual server URL.
+
+Mine
+"https://express-api-ifdg.onrender.com"
+
+Authentication
+
+Register User
+
+- **URL:** `POST /register`
+- **Description:** Registers a new user.
+- **Request Payload:**
+  ```json
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "username": "johndoe",
+    "password": "password"
+  }
+  ```
+- **Response:** New user object.
+
+Login
+
+- **URL:** `POST /login`
+- **Description:** Logs in a user and generates a JWT token.
+- **Request Payload:**
+  ```json
+  {
+    "username": "johndoe",
+    "password": "password"
+  }
+  ```
+- **Response:** JWT token.
+
+User Management
+
+Get All Users
+
+- **URL:** `GET /user`
+- **Description:** Retrieves all users.
+- **Authorization:** Requires a valid JWT token in the `Authorization` header.
+
+Get User by ID
+
+- **URL:** `GET /user/:id`
+- **Description:** Retrieves a user by ID.
+- **Authorization:** Requires a valid JWT token in the `Authorization` header.
+
+Add New User
+
+- **URL:** `POST /user`
+- **Description:** Adds a new user.
+- **Request Payload:**
+  ```json
+  {
+    "firstName": "Jane",
+    "lastName": "Doe"
+  }
+  ```
+- **Authorization:** Requires a valid JWT token in the `Authorization` header.
+
+Update User
+
+- **URL:** `PUT /user/:id`
+- **Description:** Updates a user by ID.
+- **Request Payload:**
+  ```json
+  {
+    "firstName": "Updated Name"
+  }
+  ```
+- **Authorization:** Requires a valid JWT token in the `Authorization` header.
+
+Delete User
+
+- **URL:** `DELETE /user/:id`
+- **Description:** Deletes a user by ID.
+- **Authorization:** Requires a valid JWT token in the `Authorization` header.
