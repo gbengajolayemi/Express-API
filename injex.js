@@ -12,12 +12,13 @@ const { body, validationResult } = require('express-validator');
 const mongoSanitize = require('express-mongo-sanitize');
 
 
-// Enable trust proxy
-app.set('trust proxy', true);
 
 // Initialization
 const app = express();
 const port = process.env.PORT || 4000;
+
+// Enable trust proxy
+app.set('trust proxy', true);
 
 // Middleware
 app.use(cors());
